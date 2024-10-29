@@ -1,0 +1,17 @@
+[all:vars]
+ansible_user=root
+ansible_password=password
+ansible_sudo_pass=password
+
+
+
+[mon]
+mon01	ansible_host=IP
+mon02	ansible_host=IP
+mon03	ansible_host=IP
+
+[ceph]
+osd01	ansible_host=IP
+osd02	ansible_host=IP
+osd03	ansible_host=IP
+
