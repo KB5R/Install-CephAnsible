@@ -7,6 +7,6 @@
 ```
 git clone https://github.com/KB5R/Install-CephAnsible
 cd Install-CephAnsible
-ansible-playbook update_sysctl.yaml -i hosts_ansible
+ansible-playbook install_ceph.yaml -i hosts_ansible
 ```
 ### You also need to configure the Inventory file and update_sysctl.yaml
