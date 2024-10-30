@@ -5,16 +5,19 @@
 ```
 https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html
 ```
-```dnf
+**Installing Ansible on Fedora Linux**
+```
 sudo dnf install ansible
 ```
-```apt
+**Installing Ansible on Ubuntu**
+```
 sudo apt update
 sudo apt install software-properties-common
 sudo add-apt-repository --yes --update ppa:ansible/ansible
 sudo apt install ansible
 ```
-```pacman
+**Installing Ansible on Arch Linux**
+```
 sudo pacman -S ansible
 ```
 ```
