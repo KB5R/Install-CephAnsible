@@ -1,7 +1,7 @@
 # Ansible script for setting up a server for installing Ceph
 
 ## Quick start
-*Install Ansible*
+**Install Ansible**
 `https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html`
 
 ```
