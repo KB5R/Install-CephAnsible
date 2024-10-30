@@ -1,6 +1,5 @@
 # Ansible script for setting up a server for installing Ceph
 
-## Quick start
 **Install Ansible**
 ```
 https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html
@@ -20,6 +19,7 @@ sudo apt install ansible
 ```
 sudo pacman -S ansible
 ```
+## Quick start
 ```
 git clone https://github.com/KB5R/Install-CephAnsible
 cd Install-CephAnsible
