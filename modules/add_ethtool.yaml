@@ -1,0 +1,19 @@
+---
+- hosts: all
+  become: yes
+
+  tasks:
+    - name: Добавление параметров в /etc/udev/rules.d/59-net.ring.rules
+      lineinfile:
+        path: /etc/udev/rules.d/59-net.ring.rules
+        line: "{{ item }}"
+        create: yes
+      with_items:
+        - ACTION=="add|change", SUBSYSTEM=="net", KERNEL=="en*", RUN+="/sbin/ethtool -G $name rx 4096 tx 4096"
+        - ACTION=="add|change", SUBSYSTEM=="net", KERNEL=="en*", RUN+="/sbin/ip link set $name txqueuelen 10000"
+        - ACTION=="add|change", SUBSYSTEM=="net", KERNEL=="bon*", RUN+="/sbin/ip link set $name txqueuelen 10000"
+
+    - name: Перезапуск udev
+      shell: udevadm control --reload-rules && udevadm trigger
+
+# Отрабатывает стабильно

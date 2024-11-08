@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+    - name: Удалить последней строки из файла
+      shell: |
+        for i in {1}; do sed -i '$d' /etc/udev/rules.d/59-net.ring.rules; done
+      
+# Переделать

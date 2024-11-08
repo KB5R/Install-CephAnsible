@@ -1,0 +1,14 @@
+---
+- hosts: all
+  tasks:
+    - name: Генерация ssh-keygen
+      shell: |
+        ssh-keygen -t rsa -b 4096 -N '' -f ~/.ssh/id_rsa <<< y > /dev/null
+# Надо выбирать 'executable: /bin/bash' т.к перенаправление ввода (<<<) не поддерживается оболочкой /bin/sh   
+      args:
+        executable: /bin/bash
+
+# ssh-keygen -t rsa -b 4096 - Означает что, надо сгенерировать такой ключ с такимм размером
+# -N '' Пароль ключа
+# -f ~/.ssh/id_rsa - Путь к файлу
+# <<< y > /dev/null - Подавляет вывод и ввод, подтверждая создание файла

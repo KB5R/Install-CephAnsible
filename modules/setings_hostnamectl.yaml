@@ -1,0 +1,21 @@
+---
+- name: test
+  hosts: all
+  become: yes
+  tasks:
+    - name: Установка новых имен хостов
+      command: hostnamectl set-hostname {{ item.new_hostname }}
+      when: inventory_hostname == item.inventory_hostname
+      loop:
+        - { inventory_hostname: 'mon01', new_hostname: 'mon1-ceph' }
+        - { inventory_hostname: 'mon02', new_hostname: 'mon2-ceph' }
+        - { inventory_hostname: 'mon03', new_hostname: 'mon3-ceph' }
+        - { inventory_hostname: 'osd01', new_hostname: 'osd1-ceph' }
+        - { inventory_hostname: 'osd02', new_hostname: 'osd2-ceph' }
+        - { inventory_hostname: 'osd03', new_hostname: 'osd3-ceph' }
+        - { inventory_hostname: 'osd04', new_hostname: 'osd4-ceph' }
+        - { inventory_hostname: 'osd05', new_hostname: 'osd5-ceph' }
+        - { inventory_hostname: 'osd06', new_hostname: 'osd6-ceph' }
+        - { inventory_hostname: 'osd07', new_hostname: 'osd7-ceph' }
+        - { inventory_hostname: 'osd08', new_hostname: 'osd8-ceph' }
+        - { inventory_hostname: 'osd09', new_hostname: 'osd9-ceph' }

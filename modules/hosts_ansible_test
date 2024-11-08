@@ -1,0 +1,18 @@
+[all:vars]
+ansible_user=
+ansible_password=
+ansible_sudo_pass=
+# Если нужно запустить команды от root раскоментируйте 2 стрчки выше
+
+
+[mon_medical.ru]
+mon01	ansible_host=
+mon02	ansible_host=
+
+[ceph_medical.ru]
+osd01	ansible_host=
+osd02	ansible_host=
+osd03	ansible_host=
+osd04	ansible_host=
+osd05	ansible_host=
+osd06	ansible_host=

@@ -1,0 +1,15 @@
+---
+- name: test
+  hosts: ceph_medical.ru
+  become: yes
+  tasks:
+
+
+    - name: Добавление параметров в /etc/hosts
+      lineinfile:
+        path: /etc/hosts
+        line: "{{ item }}"
+        create: yes
+      with_items:
+        - 10.0.0.0   mon1-ceph
+   

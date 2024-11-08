@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes
+
+  tasks:
+    - name: Копирование файла ssh-key.sh на удаленный хост
+      copy:
+        src: /home/popkovmk/Work/Storage_Medical_Ru/ceph
+        dest: /etc
+        mode: '0755'
