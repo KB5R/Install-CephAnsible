@@ -26,3 +26,4 @@ cd Install-CephAnsible
 ansible-playbook install_ceph.yaml -i hosts_ansible
 ```
 ### You also need to configure the Inventory file and install_ceph.yaml
+### More detailed information on setting up the playbook is in modules
