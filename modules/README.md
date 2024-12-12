@@ -125,18 +125,18 @@ ansible all -m shell -a 'echo > /etc/apt/apt.conf.d/20auto-upgrades`
         line: "{{ item }}"
         create: yes
       with_items:
-        - 10.255.253.141  mon1-ceph4-p1-01
-        - 10.255.253.142  mon2-ceph4-p2-02
-        - 10.255.253.143  mon3-ceph4-p1-03
-        - 10.255.253.127  osd1-ceph4-p1-01
-        - 10.255.253.128  osd2-ceph4-p1-01
-        - 10.255.253.129  osd3-ceph4-p1-01
-        - 10.255.253.131  osd4-ceph4-p2-02
-        - 10.255.253.132  osd5-ceph4-p2-02
-        - 10.255.253.133  osd6-ceph4-p2-02
-        - 10.255.253.144  osd7-ceph4-p1-03
-        - 10.255.253.135  osd8-ceph4-p1-03
-        - 10.255.253.136  osd9-ceph4-p1-03
+        -   mon1-ceph4-p1-01
+        -   mon2-ceph4-p2-02
+        -   mon3-ceph4-p1-03
+        -   osd1-ceph4-p1-01
+        -   osd2-ceph4-p1-01
+        -   osd3-ceph4-p1-01
+        -   osd4-ceph4-p2-02
+        -   osd5-ceph4-p2-02
+        -   osd6-ceph4-p2-02
+        -   osd7-ceph4-p1-03
+        -   osd8-ceph4-p1-03
+        -   osd9-ceph4-p1-03
 
 ```
 
@@ -187,10 +187,6 @@ ansible all -m shell -a 'echo > /etc/apt/apt.conf.d/20auto-upgrades`
 
     - name: Установка ceph-common:17.2.7
       shell: cephadm install ceph-common
-
-    - name: Отключение обновлений ceph* через "apt-mark hold ceph*"
-      shell: apt-mark hold ceph*
-```
 
 
 
