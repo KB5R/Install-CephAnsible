@@ -1,6 +1,6 @@
 ---
 - name: test
-  hosts: ceph_medical.ru
+  hosts: all
   become: yes
   tasks:
 
